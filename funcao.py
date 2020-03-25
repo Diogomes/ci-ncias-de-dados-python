@@ -2,13 +2,13 @@ x =1
 y=2
 x+y
 # add_numeros é uma função que pega dois números e os soma.
-def add_numeros(x,y):
+'''def add_numeros(x,y):
     return x+y
 add_numeros(1,2)
-'''add_numeros atualizados para 
+add_numeros atualizados para 
 obter um terceiro parâmetro opcional. 
 O uso da impressão permite a impressão 
-de várias expressões em uma única célula.'''
+de várias expressões em uma única célula.
 def add_numeros(x,y,z=None):
     if (z==None):
         return x+y
@@ -17,8 +17,8 @@ def add_numeros(x,y,z=None):
 
 print(add_numeros(1,2))
 print(add_numeros(1,2,3))
-'''função adicionar numeros atualizados para obter 
-um parâmetro de sinalizador opcional.'''
+#função adicionar numeros atualizados para obter 
+#um parâmetro de sinalizador opcional.
 def add_numeros(x,y,z=None,flag=False):
     if(flag):
         print("Flag é verdadeira!")
@@ -32,9 +32,10 @@ print(add_numeros(1, 2, flag=True))
 def add_numeros(x,y):
     return x+y
 
+
 a = add_numeros
 a(1,2)
-
+'''
 
 #Tipos e Sequências
 print("Tipos e sequências em Python: ")
@@ -118,8 +119,49 @@ print(ultimonome)#string concatenada
 
 #Certifique-se de converter objetos 
 # em seqüências de caracteres antes de concatenar
-a ={'Azael', }
+print(primeironome+primeironome)
 
-print(a+2)
+print(primeironome + str(2))
 
-{'Azael'} + str(2)
+#Dicionários associam chaves a valores
+x = {'Christopher Brooks': 'brooksch@umich.edu', 'Bill Gates': 'billg@microsoft.com'}
+x['Christopher Brooks'] # Recupere um valor usando o operador de indexação
+
+x['Kevyn Collins-Thompson'] = None
+x['Kevyn Collins-Thompson']
+
+#Itere sobre todas as chaves:
+for name in x:
+    print(x[name])
+
+#Iterar sobre todos os valores:
+for email in x.values():
+    print(email)
+
+#Iterar sobre todos os itens da lista:
+for name, email in x.items():
+    print(name)
+    print(email)
+#Você pode descompactar uma sequência em diferentes variáveis
+
+x = ('Christopher', 'Brooks', 'brooksch@umich.edu')
+fname, lname, email = x
+
+fname
+lname
+
+#Verifique se o número de valores que você está descompactando
+#  corresponde ao número de variáveis que estão sendo atribuídas.
+y = ('Christopher', 'Brooks', 'brooksch@umich.edu', 'Ann Arbor')
+fname, lname, email
+
+#O Python possui um método interno para formatação conveniente de strings.
+
+sales_record = {
+'price': 3.24,
+'num_items': 4,
+'person': 'Chris'}
+
+sales_statement = '{} bought {} item(s) at a price of {} each for a total of {}'
+
+print(sales_statement.format(sales_record['person'], sales_record['num_items'], sales_record['price'], sales_record['num_items']*sales_record['price']))
